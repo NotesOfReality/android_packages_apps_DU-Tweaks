@@ -673,4 +673,7 @@
   <string name="wallpaper_tint_keyguard">Lockscreen background tint</string>
   <string name="wallpaper_tint_notification_shade">Notification shade tint</string>
   <string name="wallpaper_tint_summary">Apply a tint to the background based on the homescreen wallpaper</string>
+  <!--Toggling of microphone for Screen Recording  -->  
+  <string name="srec_enable_mic_title">Використовувати мікрофон при записі екрану</string>
+  <string name="srec_enable_mic_summary">Використовувати мікрофон як джерело звуку під час запису екрану</string>
 </resources>

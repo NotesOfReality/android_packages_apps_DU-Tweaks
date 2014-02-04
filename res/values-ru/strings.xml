@@ -673,4 +673,7 @@
   <string name="wallpaper_tint_keyguard">Затенение фона экрана блокировки</string>
   <string name="wallpaper_tint_notification_shade">Затенение фона шторки уведомлений</string>
   <string name="wallpaper_tint_summary">Применить затенение на обои домашнего экрана</string>
+  <!--Toggling of microphone for Screen Recording  -->  
+  <string name="srec_enable_mic_title">Использовать микрофон при записи экрана</string>
+  <string name="srec_enable_mic_summary">Использовать микрофон как источник звука во время записи экрана</str
 </resources>

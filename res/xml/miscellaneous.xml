@@ -23,4 +23,11 @@
         android:title="@string/screenshot_edit_app"
         android:summary="@string/screenshot_edit_app_summary" />
 
+    <!--Toggling of microphone for Screen Recording  -->
+    <com.dirtyunicorns.tweaks.preferences.SystemSettingSwitchPreference
+        android:key="srec_enable_mic"
+        android:title="@string/srec_enable_mic_title"
+        android:summary="@string/srec_enable_mic_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

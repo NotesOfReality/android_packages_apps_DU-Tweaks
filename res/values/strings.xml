@@ -777,4 +777,8 @@
     <string name="ime_switcher_notify">Selector notification</string>
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
+    <!--Toggling of microphone for Screen Recording  -->
+    <string name="srec_enable_mic_title">Use microphone for screen recording</string>
+    <string name="srec_enable_mic_summary">Use microphone as audio input during screen recording</string>
+    
 </resources>
