@@ -24,6 +24,8 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.provider.Settings;
 
 import com.android.settings.R;
@@ -47,6 +49,14 @@ public class Notifications extends SettingsPreferenceFragment implements Prefere
                 Settings.System.MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD,
                 0, UserHandle.USER_CURRENT);
         mAnnoyingNotification.setValue(String.valueOf(threshold));
+
+       // Enable or disable mStatusBarImeSwitcher based on boolean: config_show_cmIMESwitcher
+       boolean showCmImeSwitcher = getResources().getBoolean(
+                   com.android.internal.R.bool.config_show_cmIMESwitcher);
+           if (!showCmImeSwitcher) {
+               getPreferenceScreen().removePreference(
+                       findPreference(Settings.System.STATUS_BAR_IME_SWITCHER));
+           }
     }
 
     @Override
