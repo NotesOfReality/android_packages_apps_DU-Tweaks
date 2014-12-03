@@ -678,4 +678,12 @@
   <!--Toggling of microphone for Screen Recording  -->  
   <string name="srec_enable_mic_title">Використовувати мікрофон при записі екрану</string>
   <string name="srec_enable_mic_summary">Використовувати мікрофон як джерело звуку під час запису екрану</string>
+  <!-- Smart pulldown-->
+  <string name="smart_pulldown_title">Розумний доступ</string>
+  <string name="smart_pulldown_summary">Відкривати швидкі налаштування %1$s сповіщень</string>
+  <string name="smart_pulldown_none_summary">Відкривати швидкі налаштування коли немає сповіщень</string>
+  <string name="smart_pulldown_off">Вимкнено</string>
+  <string name="smart_pulldown_none">без сповіщень</string>
+  <string name="smart_pulldown_dismissable">без тих, що видаляються</string>
+  <string name="smart_pulldown_ongoing">без постійних</string>
 </resources>

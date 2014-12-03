@@ -16,6 +16,7 @@
 
 package com.dirtyunicorns.tweaks.fragments;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -39,6 +40,7 @@ import com.dirtyunicorns.tweaks.preferences.CustomSeekBarPreference;
 public class QuickSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
+    private static final String PREF_SMART_PULLDOWN = "qs_smart_pulldown";
     private static final String PREF_COLUMNS = "qs_layout_columns";
     private static final String QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
@@ -46,6 +48,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements Prefere
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
 
     private ListPreference mQuickPulldown;
+    private ListPreference mSmartPulldown;
     private CustomSeekBarPreference mQsColumns;
     private CustomSeekBarPreference mQsPanelAlpha;
     private ListPreference mTileAnimationStyle;
@@ -65,6 +68,13 @@ public class QuickSettings extends SettingsPreferenceFragment implements Prefere
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updatePulldownSummary(quickPulldownValue);
+
+        mSmartPulldown = (ListPreference) findPreference(PREF_SMART_PULLDOWN);
+        mSmartPulldown.setOnPreferenceChangeListener(this);
+        int smartPulldown = Settings.System.getInt(resolver,
+                Settings.System.QS_SMART_PULLDOWN, 0);
+        mSmartPulldown.setValue(String.valueOf(smartPulldown));
+        updateSmartPulldownSummary(smartPulldown);
 
         final int defaultMaxQsColumns = getResources().getInteger(
                 R.integer.quick_settings_layout_columns_max_default);
@@ -112,6 +122,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements Prefere
             Settings.System.putIntForUser(getContentResolver(), Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updatePulldownSummary(quickPulldownValue);
+            return true;
+        } else if (preference == mSmartPulldown) {
+            int smartPulldown = Integer.valueOf((String) newValue);
+            Settings.System.putIntForUser(getContentResolver(), Settings.System.QS_SMART_PULLDOWN, 
+                    smartPulldown, UserHandle.USER_CURRENT);
+            updateSmartPulldownSummary(smartPulldown);
             return true;
         } else if (preference == mQsColumns) {
             int qsColumns = (Integer) newValue;
@@ -166,6 +182,22 @@ public class QuickSettings extends SettingsPreferenceFragment implements Prefere
                     : R.string.quick_pulldown_right);
             mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_summary, direction));
        }
+   }
+
+    private void updateSmartPulldownSummary(int value) {
+        Resources res = getResources();
+
+        if (value == 0) {
+            // Smart pulldown deactivated
+            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_off));
+        } else if (value == 3) {
+            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_none_summary));
+        } else {
+            String type = res.getString(value == 1
+                    ? R.string.smart_pulldown_dismissable
+                    : R.string.smart_pulldown_ongoing);
+            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
+        }
     }
 
     private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
