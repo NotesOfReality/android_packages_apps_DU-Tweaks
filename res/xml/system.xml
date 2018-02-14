@@ -47,4 +47,13 @@
         android:summary="@string/powermenu_summary"
         android:fragment="com.dirtyunicorns.tweaks.fragments.PowerMenu" />
 
+     <!-- IME Options -->
+    <com.dirtyunicorns.tweaks.preferences.CategoryPreference
+            android:id="@+id/ime_settings"
+            android:key="ime_settings"
+            android:icon="@drawable/dt_ime_settings"
+            android:title="@string/keyboard_ime_title"
+            android:summary="@string/keyboard_ime_summary"
+            android:fragment="com.dirtyunicorns.tweaks.fragments.IMESettings" />
+
 </PreferenceScreen>
