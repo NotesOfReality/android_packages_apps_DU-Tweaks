@@ -686,4 +686,7 @@
   <string name="smart_pulldown_none">без сповіщень</string>
   <string name="smart_pulldown_dismissable">без тих, що видаляються</string>
   <string name="smart_pulldown_ongoing">без постійних</string>
+<!-- Statusbar brightness control -->
+  <string name="status_bar_toggle_brightness">Керування яскравістю</string>
+  <string name="status_bar_toggle_brightness_summary">Регулювати яскравість екрану рухом пальця по рядку стану</string>
 </resources>

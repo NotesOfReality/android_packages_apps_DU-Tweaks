@@ -812,5 +812,8 @@
     <!-- DT2S on lockscreen and statusbar -->
     <string name="double_tap_sleep_lockscreen">Double tap to sleep on lockscreen</string>
     <string name="double_tap_sleep_gesture_title">Double tap status bar to sleep</string>
+    <!-- Statusbar brightness control -->
+    <string name="status_bar_toggle_brightness">Statusbar brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
 </resources>
