@@ -34,6 +34,19 @@
     <string name="slim_recents_hints_footer">To clear all apps, pinch-in with two fingers on the panel. To block an app from being cleared, long press on its icon to star it.\n\nFor additional recents features such as multiwindow or to kill an app, long press on any app window in the panel.</string>
     <string name="smart_pixels_warning_text">Smart pixels is a power saving feature. Depending on how many pixels you decide to turn off, you could see a significant improvement in battery life. For a good user experience, we recommend you set the amount of disabled pixels at 75 percent.</string>
 
+    <!-- General -->
+    <string name="general_ok">Okay</string>
+    <string name="general_reset">Reset</string>
+    <string name="general_dlg_reset_android">Default</string>
+    <string name="general_default_string">Default</string>
+    <string name="general_add">Add</string>
+    <string name="general_enabled">Enabled</string>
+    <string name="general_choose_app">Choose application</string>
+    <string name="general_help">Help</string>
+    <string name="general_reset_message">Reset all entries to default?</string>
+    <string name="generaĺ_attention">Attention</string>
+    <string name="general_restart_systemui">Restart UI</string>
+
     <!-- Categories -->
     <!-- System -->
     <string name="device_extras_title">Device extras</string>
