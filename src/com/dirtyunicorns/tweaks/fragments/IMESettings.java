@@ -177,7 +177,7 @@ public class IMESettings extends SettingsPreferenceFragment
             switch (id) {
                 case DLG_KEYBOARD_ROTATION:
                     return new AlertDialog.Builder(getActivity())
-                    .setTitle(R.string.attention)
+                    .setTitle(R.string.general_attention)
                     .setMessage(R.string.keyboard_rotation_dialog)
                     .setPositiveButton(R.string.dlg_ok,
                         new DialogInterface.OnClickListener() {
