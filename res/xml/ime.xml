@@ -1,4 +1,4 @@
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2016 RR
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,9 +14,7 @@
      limitations under the License.
 -->
 
-<PreferenceScreen
-
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/keyboard_ime_title">
 
@@ -48,4 +46,5 @@
         android:title="@string/show_enter_key_title"
         android:summary="@string/show_enter_key_summary"
         android:persistent="false" />
+
 </PreferenceScreen>
