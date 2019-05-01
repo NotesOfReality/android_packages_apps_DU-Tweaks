@@ -797,4 +797,6 @@
     <string name="bluetooth_sco_volume_option_title">Volume steps: Bluetooth call</string>
     <string name="volume_steps_reset">Reset</string>
 
+    <string name="pie_volume_dialog_title">Android P Volume panel style</string>
+
 </resources>
