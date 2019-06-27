@@ -48,6 +48,9 @@
     <string name="general_restart_systemui">Restart UI</string>
 
     <!-- Categories -->
+	<!-- Gestures -->
+	<string name="gestures_title">Gestures</string>
+    <string name=" gestures_summary">UI Gestures on statusbar or the whole screen for smarter interactions</string>
     <!-- System -->
     <string name="device_extras_title">Device extras</string>
     <string name="device_extras_summary">Device specific tweaks</string>

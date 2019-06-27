@@ -31,6 +31,8 @@
   <string name="slim_recents_hints_footer">To clear all apps, pinch-in with two fingers on the panel. To block an app from being cleared, long press on its icon to star it.\n\nFor additional recents features such as multiwindow or to kill an app, long press on any app window in the panel.</string>
   <string name="smart_pixels_warning_text">Smart pixels is a power saving feature. Depending on how many pixels you decide to turn off, you could see a significant improvement in battery life. For a good user experience, we recommend you set the amount of disabled pixels at 75 percent.</string>
   <!-- Categories -->
+  <!-- Gestures -->
+  <string name="gestures_title">Жести</string>
   <!-- System -->
   <string name="device_extras_title">Device extras</string>
   <string name="device_extras_summary">Device specific tweaks</string>
